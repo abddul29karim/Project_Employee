@@ -33,9 +33,8 @@ public class E_DaoImp implements E_Dao {
     //https://www.candidjava.com/tutorial/spring-boot-hibernate-crud-example/
     @Override
     public Employee_Db findById(Integer emp_id) {
-        return (Employee_Db) this.session().createQuery
-                ("from Employee_Db where emp_id= :id_emp").
-                setParameter("id_emp",emp_id).uniqueResult();
+        return (Employee_Db) this.session().createQuery("from Employee_Db where emp_id= :id_emp")
+                .setParameter("id_emp",emp_id).uniqueResult();
     }
 
     @Override
